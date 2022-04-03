@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Real Time Transport Challenge &mdash; ICTDays Summercamp</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/jupman.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/jupman-web.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/softpython-theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://davidleoni.github.io/ictdays-summercamp/2019/real-time-transport/real-time-transport-challenge.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/js/jupman.js"></script>
+        <script type="text/javascript" src="../../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="A Prova di Hacker Challenge" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../toc-page.html" class="icon icon-home"> ICTDays Summercamp
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#Vai-alle-Challenges-2019">Vai alle Challenges 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#Vai-alle-Challenges-2018">Vai alle Challenges 2018</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../toc.html">2018</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2018/business-oriented/business-oriented-challenge.html">Business Oriented Challenge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/business-oriented/business-oriented-challenge.html#a.-Analisi">a. Analisi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/business-oriented/business-oriented-challenge.html#b.-Ricerca-base">b. Ricerca base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/business-oriented/business-oriented-challenge.html#c.-Ricerca-avanzata">c. Ricerca avanzata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/business-oriented/business-oriented-challenge.html#d.-Bandi-simili">d. Bandi simili</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/business-oriented/business-oriented-challenge.html#Dati-bandi-di-gara">Dati bandi di gara</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/business-oriented/business-oriented-challenge.html#Dati-Atoka">Dati Atoka</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="2018/https://turismo-3.0/turismo-3.0-challenge.ipynb">2018/https://turismo-3.0/turismo-3.0-challenge.ipynb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html">Mondiali Russia 2018 Challenge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#a.-Analisi">a. Analisi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#b.-Pulizia-di-dati">b. Pulizia di dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#c.-Integrazione-dati">c. Integrazione dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#d.-Sviluppo-del-modello-di-predizione">d. Sviluppo del modello di predizione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#e.-Sviluppo-chatbot">e. Sviluppo chatbot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#f.-Lavorare-alla-presentazione">f. Lavorare alla presentazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#Dati">Dati</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#FIFA-Soccer-Rankings">FIFA Soccer Rankings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#Risultati-match-internazionali">Risultati match internazionali</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#FIFA-World-Cup-2018-data-set">FIFA World Cup 2018 data set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2018/mondiali-russia-2018/mondiali-russia-2018-challenge.html#Dati-news">Dati news</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../toc.html#id2">2019</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html">RiParco da Trento Challenge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#a.-Acquisire-foto">a. Acquisire foto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#b.-Estrazione-dati-foto">b. Estrazione dati foto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#c.-Anonimizzare-foto">c. Anonimizzare foto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#d.-Realizzare-sito">d. Realizzare sito</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#d.1-mostrare-e-caricare-foto">d.1 mostrare e caricare foto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#d.2-mostrare-eventi-pubblici">d.2 mostrare eventi pubblici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#d.3-interfaccia-per-organizzare-eventi">d.3 interfaccia per organizzare eventi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#Dataset">Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#Foto">Foto</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#EXTRA:-Concorso-fotografico-Wiki-Loves-Monuments">EXTRA: Concorso fotografico Wiki Loves Monuments</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#OpenStreetMap">OpenStreetMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../riparco-da-trento/riparco-da-trento-challenge.html#dati.trentino.it">dati.trentino.it</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../lavoro-4.0/lavoro-4.0-challenge.html">Lavoro 4.0 Challenge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../lavoro-4.0/lavoro-4.0-challenge.html#a.-Analisi">a. Analisi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lavoro-4.0/lavoro-4.0-challenge.html#b.-Ricerca-base">b. Ricerca base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lavoro-4.0/lavoro-4.0-challenge.html#c.-Ricerca-avanzata">c. Ricerca avanzata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lavoro-4.0/lavoro-4.0-challenge.html#e.-Interfaccia-utente">e. Interfaccia utente</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lavoro-4.0/lavoro-4.0-challenge.html#Dataset">Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lavoro-4.0/lavoro-4.0-challenge.html#dataset_vacancy.csv">dataset_vacancy.csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lavoro-4.0/lavoro-4.0-challenge.html#dataset_CV.csv">dataset_CV.csv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html">A Prova di Hacker Challenge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html#a.-Analisi">a. Analisi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html#b.-Integrazione">b. Integrazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html#c.-Sviluppo-di-un-indice">c. Sviluppo di un indice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html#d.-Visualizzazione">d. Visualizzazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html#Dataset">Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html#dataset-oval">dataset oval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html#rilevamento.jsonl">rilevamento.jsonl</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Real Time Transport Challenge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a.-Analisi">a. Analisi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#b.-Preparazione">b. Preparazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c.-Visualizzazione">c. Visualizzazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c.1-Utilizzo-linee">c.1 Utilizzo linee</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c.2-Differenze-dati-device-/-registrazioni-manuali">c.2 Differenze dati device / registrazioni manuali</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d.-Interfaccia-interattiva">d. Interfaccia interattiva</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#e.-Inferenza">e. Inferenza</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Dataset">Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Rilevazioni_sensori.csv">Rilevazioni_sensori.csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Rilevazioni_manuali.csv">Rilevazioni_manuali.csv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="toc.html#http://">Index</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../toc-page.html">ICTDays Summercamp</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+    <div id='jupman-langs'></div>
+
+    <!-- SMALL TEMPLATE FOR LANGUAGES (VERY CUSTOM FOR softpython.org !!)
+    <script>
+    var hn = window.location.hostname;
+    var pn = window.location.pathname;
+
+    if (hn.includes('softpython.org')){
+        JUPMAN_LANG = hn.slice(0,window.location.hostname.indexOf('.'));
+    } else if (pn.includes('/_build/html')){
+        var pos = pn.indexOf('/_build/html');
+        JUPMAN_LANG = pn.slice(pos-2, pos);
+    } else {
+        JUPMAN_LANG = 'en';
+    }
+    console.log('JUPMAN_LANG=',JUPMAN_LANG);
+    </script>
+    -->
+    
+    
+     <!-- <li> <h2 style="background-color:red; color:yellow">WARNING! THIS VERSION IS OLD !  <br/>
+    <a style=" text-decoration: underline;" href="https://jupman.readthedocs.io/en/latest">GOT TO LATEST VERSION</a></li>
+ </h2></li>-->
+    <!-- Commented because doesn't work with sections,
+         see https://github.com/DavidLeoni/jupman/issues/39
+    <li><a href="../../toc-page.html">Docs</a> &raquo;</li>
+    
+        <li><a href="../../toc.html">2018</a> &raquo;</li>
+    
+    <li>Real Time Transport Challenge</li>
+    -->
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Real-Time-Transport-Challenge">
+<h1>Real Time Transport Challenge<a class="headerlink" href="#Real-Time-Transport-Challenge" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image0" src="../../_images/u-hopper-thinkin-big1.png" /></p>
+<p><strong>Sponsor:</strong> <a class="reference external" href="https://u-hopper.com/">U-Hopper</a> / <a class="reference external" href="https://thinkin.io">Thinkin</a></p>
+<p>Nell’ambito dei <strong>trasporti pubblici</strong>, per comprendere appieno le dinamiche di afflusso dei passeggeri sugli <strong>autobus</strong> e quindi ottimizzare il numero di corse e i tragitti, è importante sapere il <strong>numero di passeggeri</strong> per linea durante la giornata. Una società di trasporti pubblici di una città che U-Hopper non è autorizzata a rivelare (a scanso di equivoci, la città non è comunque Trento), è interessata pertanto a verificare se sia possibile stimare il numero di passeggeri a bordo di un
+autobus sulla base del numero di dispositivi (<strong>smartphone</strong>, essenzialmente) rilevati a bordo dell’autobus stesso tramite opportuni <strong>sensori</strong>. Una procedura di rilevazione di questo tipo presenta alcuni vantaggi rispetto a metodologie più tradizionali: per esempio, rispetto alla rilevazione manuale, non richiede l’impiego a tempo pieno di un addetto su ogni autobus che conteggi il numero di passeggeri a bordo nel corso tragitto; rispetto invece a una misurazione effettuata tramite controllo
+dei dati delle obliteratrici, una rilevazione tramite sensori consente di stabilire non solo quando un passeggero salga sull’autobus ma anche quando ne discenda.</p>
+<div class="line-block">
+<div class="line">Al riguardo, la società si è rivolta a U-Hopper per la programmazione e installazione dei sensori e, una volta acquisiti i dati, per la messa a punto di un procedimento (algoritmo) in grado di analizzare le misurazioni per effettuare una stima del numero di passeggeri. Per calibrare il sistema, la società di trasporti pubblici ha messo a disposizione di U-Hopper le rilevazioni del numero di passeggeri compiute manualmente da alcuni addetti a bordo degli autobus - questi ultimi ovviamente
+muniti anche di sensore - di varie linee urbane durante alcune giornate.</div>
+<div class="line">U-Hopper ha già provveduto a realizzare quanto richiesto dal cliente, ma in futuro potrebbe risultare utile produrre <strong>visualizzazioni grafiche</strong> per mettere in evidenza regolarità nell’affluenza dei passeggeri (<em>pattern</em>) tramite uno strumento che risulti <strong>facilmente comprensibile</strong> per qualunque interlocutore. Si richiede quindi di visualizzare il numero di device rilevati mediamente giorno per giorno sulle diverse linee nelle varie fasce orarie, comparandolo eventualmente con le
+rilevazioni manuali. Per aumentare la fruibilità, si potrebbe creare un’apposita <strong>interfaccia utente</strong> stile chatbot che consenta di scegliere per es. quale fascia oraria evidenziare.</div>
+</div>
+<div class="section" id="a.-Analisi">
+<h2>a. Analisi<a class="headerlink" href="#a.-Analisi" title="Permalink to this headline">¶</a></h2>
+<p>Esplorare i dati per individuare a quali linee urbane si riferiscano le misurazioni, in quali giorni siano state effettuate e in quali fasce orarie (ovviamente gli autobus non circolano per tutte le 24 ore) - in questa fase occorrerà procedere a una conversione del timestamp in modo che giorno e ora siano leggibili.</p>
+</div>
+<div class="section" id="b.-Preparazione">
+<h2>b. Preparazione<a class="headerlink" href="#b.-Preparazione" title="Permalink to this headline">¶</a></h2>
+<p>Importanti operazioni di pulizia sono state già svolte da U-Hopper, come la rimozione preliminare dai dati dei segnali spuri, cioè dei segnali provenienti da device non appartenenti a passeggeri dell’autobus (per esempio, il device dell’autista, quello del guidatore e/o passeggero dell’auto che transita a fianco dell’autobus, etc.).</p>
+<p>Quello che dovrete fare voi sarà segmentare dei dati in modo che siano raggruppati in base alla linea dell’autobus e alla fascia oraria. Dato che i sensori effettuano rilevazioni a intervalli di qualche secondo, è naturale che il device di ogni passeggero compaia ripetutamente fintanto che il passeggero sia a bordo dell’autobus e di questo aspetto occorrerà tener opportunamente conto.</p>
+</div>
+<div class="section" id="c.-Visualizzazione">
+<h2>c. Visualizzazione<a class="headerlink" href="#c.-Visualizzazione" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="c.1-Utilizzo-linee">
+<h3>c.1 Utilizzo linee<a class="headerlink" href="#c.1-Utilizzo-linee" title="Permalink to this headline">¶</a></h3>
+<p>Per ogni linea di autobus si potrebbero produrre una o più visualizzazioni grafiche (tabella, istogramma, diagramma a torta, etc.) relative alla frequentazione dell’autobus nelle varie fasce orarie delle diverse giornate (si potrebbe considerare un intervallo temporale di un’ora, per esempio), mettendo in evidenza quanto sia stato utilizzato l’autobus in ogni fascia rispetto alla media giornaliera della linea. Una visualizzazione di questo tipo sarebbe per esempio utile alla società di trasporti
+per verificare se sia il caso di intensificare - o rarefare - il numero di corse rispetto alla prassi attuale, tenuto anche conto delle variazioni di affluenza nei giorni festivi rispetto ai feriali.</p>
+</div>
+<div class="section" id="c.2-Differenze-dati-device-/-registrazioni-manuali">
+<h3>c.2 Differenze dati device / registrazioni manuali<a class="headerlink" href="#c.2-Differenze-dati-device-/-registrazioni-manuali" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Siccome non tutti i passeggeri dispongono necessariamente di un device, i numeri nelle visualizzazioni relative alle rilevazioni dei sensori non coincideranno con gli analoghi numeri che si potrebbero ottenere a partire dalle misurazioni manuali. Cionondimeno, un confronto tra i picchi rilevati in un caso e nell’altro potrebbe essere utile a segnalare eventuali anomalie/malfunzionamenti dei sensori (peraltro nuovi) o blackout, aiutando così U-Hopper o la società dei trasporti stessa a
+procedere con le necessarie verifiche e, nel caso, a intervenire opportunamente.</div>
+<div class="line">Si potrebbero quindi produrre visualizzazioni analoghe a quelle cui si fa riferimento nella sezione d.1, impiegando però i dati ottenuti tramite le misurazioni effettuate manualmente dagli addetti della società di trasporti, così da procedere poi al confronto qui sopra descritto.</div>
+</div>
+</div>
+<div class="section" id="d.-Interfaccia-interattiva">
+<h3>d. Interfaccia interattiva<a class="headerlink" href="#d.-Interfaccia-interattiva" title="Permalink to this headline">¶</a></h3>
+<p>Presentare il tutto in un chatbot o sito, includendo elementi interattivi: per esempio, un utente potrebbe inserire la linea urbana, il giorno della settimana e la fascia oraria e vedersi restituito il corrispondente numero di device rilevati, nuovamente evidenziato in maniera diversa a seconda di quanto elevato o basso sia il numero di device rapportato alla media giornaliera.</p>
+</div>
+<div class="section" id="e.-Inferenza">
+<h3>e. Inferenza<a class="headerlink" href="#e.-Inferenza" title="Permalink to this headline">¶</a></h3>
+<p>Se vi avanza tempo, come extra guardate cosa si può inferire solo analizzando la distribuzione dei picchi nell’arco di una singola giornata. Potreste avanzare ipotesi sulla tipologia di area urbana servita dalla varie linee di autobus: per esempio, picchi al mattino presto e in tarda mattinata potrebbero far ipotizzare che la linea urbana in esame serva dei poli scolastici, picchi al mattino presto e nel tardo pomeriggio porterebbero invece a credere che la linea urbana serva aree di uffici e/o
+industrie. Provate quindi a realizzare una tabella che metta in corrispondenza le fermate con il tipo di luogo.</p>
+</div>
+</div>
+<div class="section" id="Dataset">
+<h2>Dataset<a class="headerlink" href="#Dataset" title="Permalink to this headline">¶</a></h2>
+<p>I dataset sono forniti da <a class="reference external" href="https://www.u-hopper.com">U-Hopper</a>. Per i dati completi chiedere a <a class="reference external" href="mailto:david&#46;leoni&#37;&#52;&#48;unitn&#46;it">david<span>&#46;</span>leoni<span>&#64;</span>unitn<span>&#46;</span>it</a></p>
+<p>Vi verranno forniti due file, <code class="docutils literal notranslate"><span class="pre">Rilevazioni_sensori.csv</span></code> e <code class="docutils literal notranslate"><span class="pre">Rilevazioni_manuali.csv</span></code></p>
+<p>Le rilevazioni - sia tramite sensori che tramite addetti della società - sono state effettuate su tre linee urbane di un Comune (che deve rimanere anonimo) nel corso di tre distinte giornate durante una settimana del mese di novembre dell’anno scorso. Più precisamente, il file con le rilevazioni dei sensori e quello con le misurazioni manuali contengono circa 110000 e 5300 righe rispettivamente, per un totale di circa 2.5 Mb e 210 Kb di memoria. Le rilevazioni coprono le fasce orarie dalle 5-6
+del mattino (circa) fino alle 20-21 (circa), eccezion fatta per una linea di bus che, in due delle tre giornate in questione, ha dati solo tra le 5 e le 10 per un giorno e tra le 6 e le 16 per l’altro.</p>
+<div class="section" id="Rilevazioni_sensori.csv">
+<h3>Rilevazioni_sensori.csv<a class="headerlink" href="#Rilevazioni_sensori.csv" title="Permalink to this headline">¶</a></h3>
+<p>Righe: 110000</p>
+<p>Dimensione: 2.5 Mb</p>
+<p>Colonne:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span></code>: linea di autobus della rete urbana</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Timestamp</span></code>: timestamp dell’istante in cui la rilevazione è stata effettuata</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ID</span> <span class="pre">Device</span></code>: id del device rilevato (opportunamente anonimizzato)</p></li>
+</ul>
+<p>Esempio:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Line    Timestamp           ID_Device
+11      1542859801.14977    53c5a73e-b1a3-5618-81f2-ec0d8a24cb10
+11      1542859805.09879    53c5a73e-b1a3-5618-81f2-ec0d8a24cb10
+11      1542860008.60541    0d36bc0a-c1c9-535a-92fe-187dcb670dc4
+6       1542861382.94801    538072a4-722b-5e5a-afdd-46bcd9626245
+6       1542861384.6065     5656b67a-67d3-5b31-8e53-637b1ef501e7
+6       1542861384.89655    7493648b-4eef-5029-bfe3-f363aae59c2d
+</pre></div>
+</div>
+</div>
+<div class="section" id="Rilevazioni_manuali.csv">
+<h3>Rilevazioni_manuali.csv<a class="headerlink" href="#Rilevazioni_manuali.csv" title="Permalink to this headline">¶</a></h3>
+<p>Righe: 5300</p>
+<p>Dimensione: 210 Kb</p>
+<p>Colonne:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">linea</span> <span class="pre">dell'autobus</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Passengers</span></code>: numero di passeggeri presenti sull’autobus una volta terminate le operazioni di salita e discesa a una fermata (è qui utile specificare che gli addetti hanno proceduto alla rilevazione alla ripartenza dell’autobus da ogni fermata)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Gone_up</span></code>: numero di passeggeri saliti alla fermata</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Gone_down</span></code>: numero di passeggeri discesi</p></li>
+</ul>
+<p>Esempio:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Line    Timestamp   Passengers  Gone_up Went_down
+6       1542870352  17          2       1
+6       1542870960  12          0       2
+6       1542871204  11          3       0
+9       1542873885  5           0       0
+9       1542873976  0           0       5
+9       1542874068  18          18      0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../a-prova-di-hacker/a-prova-di-hacker-challenge.html" class="btn btn-neutral float-left" title="A Prova di Hacker Challenge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright # 2018 - 2022, Team ICT Days Summercamp.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
