@@ -454,9 +454,6 @@ def setup(app):
         else:
             return x
 
-    jm.zip_paths(['project', 'requirements.txt'], 
-                  '_static/generated/project-template',
-                  remap=remap)    
 
 source_suffix = {
     '.rst': 'restructuredtext',
