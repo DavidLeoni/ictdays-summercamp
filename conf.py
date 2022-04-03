@@ -24,19 +24,19 @@ import re
 jm = jmt.Jupman()
 
 # TODO CHANGE
-jm.subtitle = "A template manager for online books made with Jupyter notebooks and NBSphinx doc generator""" 
-jm.course = "Applied Pythonics" # TODO CHANGE
-jm.degree = "Nuclear Templates Engineering" # TODO CHANGE
-author = 'People That Write a Lot' # TODO CHANGE
+jm.subtitle = "Sito per l'ICT Days Summercamp""" 
+jm.course = "Python"
+jm.degree = "Data science"
+author = 'Team ICT Days Summercamp'
 # TODO FIRST YEAR
-copyright = '# 2020 - %s, %s' % (datetime.datetime.now().year, author)
+copyright = '# 2018 - %s, %s' % (datetime.datetime.now().year, author)
 
 #####    'jm.filename' IS *VERY* IMPORTANT !!!!
 #####     IT IS PREPENDED IN MANY GENERATED FILES
 #####     AND IT SHOULD ALSO BE THE SAME NAME ON READTHEDOCS 
 #####     (like i.e. jupman.readthedocs.org)
 
-jm.filename = 'jupman'   # The filename without the extension
+jm.filename = 'ictdays-summercamp'   # The filename without the extension
 
 # common files for exercise and exams as paths. Paths are intended relative to the project root. Globs like /**/* are allowed.
 
@@ -53,28 +53,28 @@ jm.chapter_exclude_patterns =  ['[^_]*/','exams/', 'project/']
 
 # words used in ipynb files - you might want to translate these in your language. 
 # Use singular
-jm.ipynb_show_solution = "Show solution"
-jm.ipynb_hide_solution = "Hide"
-jm.ipynb_show_answer = "Show answer"
-jm.ipynb_hide_answer = "Hide"
+jm.ipynb_show_solution = "Mostra soluzione"
+jm.ipynb_hide_solution = "Nascondi"
+jm.ipynb_show_answer = "Mostra risposta"
+jm.ipynb_hide_answer = "Nascondi"
 # Use plural
-jm.ipynb_solutions = "SOLUTIONS"
-jm.ipynb_exercises = "EXERCISES"
+jm.ipynb_solutions = "SOLUZIONI"
+jm.ipynb_exercises = "ESERCIZ"
 
 #NOTE: this string is not just a translation, it's also a command that when building the exercises
 #      removes the content after it in the Python cell it is contained in
 #      If the user inserts extra spaces the phrase will be recognized anyway
-jm.write_solution_here = jmt.tag_regex("# write here", must_begin=False, preserve_line=True)
+jm.write_solution_here = jmt.tag_regex("# scrivi qui", must_begin=False, preserve_line=True)
 
 #NOTE: this string is not just a translation, it's also a command that when building the exercises  
 # completely removes the content of the python cell it is contained in (solution comment included). 
 # If the user inserts extra spaces the phrase will be recognized anyway
-jm.solution = jmt.tag_regex("# SOLUTION")
+jm.solution = jmt.tag_regex("# SOLUZIONE")
 
 #NOTE: this string is not just a translation, it's also a command that 
 #   when building the exercises removes the content after it in the markdown cell
 #   it is contained in
-jm.markdown_answer = jmt.tag_regex('**ANSWER**:')
+jm.markdown_answer = jmt.tag_regex('**RISPOSTA**:')
 #################################################################
 
 jm.zip_ignored = ['__pycache__', '**.ipynb_checkpoints', '.pyc', '.cache', '.pytest_cache', '.vscode']
@@ -87,7 +87,7 @@ jm.build = "_build"
 
 jm.manuals = {
     "student": {
-        "name" : "Jupman",  # TODO put manual name, like "Scientific Programming"
+        "name" : "ICTDays Summercamp",  # TODO put manual name, like "Scientific Programming"
         "audience" : "studenti",
         "args" : "",
         "output" : ""
@@ -243,7 +243,7 @@ html_js_files = [
 html_css_files = [
     'css/jupman.css',      # shared among jupyter and website
     'css/jupman-web.css',  # only on website
-    #'css/softpython-theme.css',  #uncomment to activate    
+    'css/softpython-theme.css',  #uncomment to activate    
 ]
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -442,6 +442,9 @@ def setup(app):
         jm.zip_folder(folder)
     jm.zip_folders('exams/*/solutions', 
                     lambda x:  '%s-%s-exam' % (jm.filename, x.split('/')[-2]))
+    
+    jm.zip_folders('20*/*/', 
+                    lambda x:  '%s-challenge' % (x.split('/')[-2]))
     # Build Project
     def remap(x):
         if x == 'requirements.txt':
