@@ -203,7 +203,7 @@ language = None
 html_title = project # + ' version ' + release
 # canonical url for documentation
 # since sphinx 1.8
-html_baseurl = 'https://jupman.softpython.org/en/latest/'
+html_baseurl = 'https://davidleoni.github.io/ictdays-summercamp/'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
