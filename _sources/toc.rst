@@ -15,7 +15,7 @@
     :glob:
 
     2018/business-oriented/business-oriented-challenge.ipynb
-    2018/https://turismo-3.0/turismo-3.0-challenge.ipynb
+    2018/turismo-3.0/turismo-3.0-challenge.ipynb
     2018/mondiali-russia-2018/mondiali-russia-2018-challenge.ipynb
         
 
